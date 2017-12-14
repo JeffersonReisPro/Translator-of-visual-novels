@@ -1,9 +1,10 @@
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function (tab) {
 	
-	var arrayScript = ["js/libs/jquery-3.2.1.min.js", "js/create_iframes.js"];
+	var arrayScript = ["js/libs/jquery-3.2.1.min.js", "js/create_iframes.js", "js/power_by.js"];
 
 	InjectMultipleScripts(arrayScript);
+	
 });
 
 //============================================================================================

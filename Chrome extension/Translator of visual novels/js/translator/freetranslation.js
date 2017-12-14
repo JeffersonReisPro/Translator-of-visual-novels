@@ -1,4 +1,4 @@
-document.body.style.background = "blue";
+document.body.style.background = "#e1e1e1";
 //==============================================================
 //==================== SCRIPT TO EXTENSION =====================
 //==============================================================
@@ -31,10 +31,10 @@ function SendMessageBackground(myMethod, msn) {
 
 //Element where the translation will be displayed
 //element of translation output
-var elementTranslationOutputID = "#result_box";
+var elementTranslationOutputID = "#translated-text";
 
 //text input there be translated
-var elementTranslationInputID = "#source";
+var elementTranslationInputID = "#source-text";
 
 
 //Send question to page
@@ -50,10 +50,10 @@ function SendQuestionPage (myInput) {
 	var myVar = setInterval(function () {
 
 		//Simulate pressing the translation button
-		$("#gt-submit").trigger('submit');
+		$("#translate-text-button").trigger('click');
 
 		//Check if there is any translation ready
-		if (element.text() != "") {
+		if (element.text() != "" || element.text() != "...") {
 
 			//Translated text
 			var myOutput = element.text();
