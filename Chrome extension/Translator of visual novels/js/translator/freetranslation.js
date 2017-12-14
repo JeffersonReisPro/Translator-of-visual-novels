@@ -5,14 +5,14 @@ document.body.style.background = "#e1e1e1";
 var translatedText = "translatedText";
 var originalText = "originalText";
 
-////Check if you received any messages
+//Check if you received any messages
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 	if (request.method == originalText) {
-		//Get the chatbot message
-		var myAnswer = request.reply;
+		//take the text to be translated
+		var text = request.reply;
 		//
-		SendQuestionPage(myAnswer);
+		SendQuestionPage(text);
 	}
 
 });

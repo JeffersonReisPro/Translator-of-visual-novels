@@ -7,10 +7,10 @@ var translatedText = "translatedText";
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 	if (request.method == translatedText) {
-		//Get the chatbot message
-		var myAnswer = request.reply;
+		//Get the translated text
+		var text = request.reply;
 		//
-		StartSpeak(myAnswer);
+		StartSpeak(text);
 	}
 
 });
