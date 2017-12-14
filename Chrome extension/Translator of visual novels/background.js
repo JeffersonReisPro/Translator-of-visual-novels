@@ -1,9 +1,7 @@
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function (tab) {
 	
-	var arrayScript = ["js/libs/jquery-3.2.1.min.js", "js/create_iframes.js", "js/power_by.js"];
-
-	InjectMultipleScripts(arrayScript);
+	CreateIframesInGamePage();
 	
 });
 
@@ -36,7 +34,13 @@ function SendMessageTabs(methodName, replyValue) {
 
 //============================================================================================
 
+function CreateIframesInGamePage() {
 
+	var arrayScript = ["js/libs/jquery-3.2.1.min.js", "js/create_iframes.js", "js/power_by.js"];
+
+	InjectMultipleScripts(arrayScript);
+
+}
 
 
 //Injects all the scripts that are in an array.

@@ -53,14 +53,14 @@ function SendQuestionPage (myInput) {
 		$("#translate-text-button").trigger('click');		
 
 		//Check if there is any translation ready
-		if (element.text().length >= 5) {
+		if (element.val().length >= 5) {
 
 			//Translated text
-			var myOutput = element.text();
+			var myOutput = element.val();
 			//Send the translation to the background.js
 			SendMessageBackground(translatedText, myOutput);
 			//
-			element.text("##");
+			element.val("#");
 			//Stop update
 			clearInterval(myVar);
 		}
