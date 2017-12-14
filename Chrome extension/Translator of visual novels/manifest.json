@@ -23,6 +23,44 @@
 		"tabs"
 	],
 
+	"content_scripts": [
+
+		//=======================================================================
+		//============================== TTS ====================================
+		//=======================================================================
+
+		//Vocalware
+		{
+			"run_at": "document_end",
+			"all_frames": true,
+			"matches": [
+				"*://www.vocalware.com/index/demo"
+			],
+			"js": [
+				"js/libs/jquery-3.2.1.min.js",
+				"js/tts/vocalware.js"
+			]
+		},
+
+
+		//=======================================================================
+		//============================ Translator =================================
+		//=======================================================================
+
+		{
+			"run_at": "document_end",
+			"all_frames": true,
+			"matches": [
+				"https://www.freetranslation.com/*"
+			],
+			"js": [
+				"js/libs/jquery-3.2.1.min.js",
+				"js/translator/freetranslation.js"
+			]
+		}
+
+	],
+
 	"web_accessible_resources": [
 		"img/logo.png"
 	]
