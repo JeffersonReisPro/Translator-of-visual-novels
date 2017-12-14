@@ -50,16 +50,17 @@ function SendQuestionPage (myInput) {
 	var myVar = setInterval(function () {
 
 		//Simulate pressing the translation button
-		$("#translate-text-button").trigger('click');
+		$("#translate-text-button").trigger('click');		
 
 		//Check if there is any translation ready
-		if (element.text() != "" || element.text() != "...") {
+		if (element.text().length >= 5) {
 
 			//Translated text
 			var myOutput = element.text();
 			//Send the translation to the background.js
 			SendMessageBackground(translatedText, myOutput);
 			//
+			element.text("##");
 			//Stop update
 			clearInterval(myVar);
 		}
