@@ -1,0 +1,30 @@
+{
+	"background": {
+		"scripts": [ "background.js" ]
+	},
+	//
+	"manifest_version": 2,
+	"name": "Translator of visual novels",
+	"version": "0.0.1",
+	//
+	//"default_locale": "en",
+	"description": "This plug in for Google chrome translates visual novels made in tyranobuilder.",
+	"icons": {
+		"48": "img/logo.png",
+		"72": "img/logo.png"
+	},
+	"browser_action": {
+		"default_title": "Translator VN",
+		"default_icon": "img/logo.png"
+	},
+	//
+	"permissions": [
+		"activeTab",
+		"tabs"
+	],
+
+	"web_accessible_resources": [
+		"img/logo.png"
+	]
+
+}
